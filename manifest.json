@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "slim-translator",
+    "version": "0.0.1",
+
+    "author": "Zhigang Song",
+    "description": "A translate extension use google translate API",
+    "homepage_url": "https://github.com/sidgwick/slim-translator",
+
+    "icons": {
+        "16": "icons/logo-16.png",
+        "32": "icons/logo-32.png",
+        "48": "icons/logo-48.png",
+        "96": "icons/logo-96.png"
+    },
+
+    "applications": {
+        "gecko": {
+            "id": "slim-translator.ext@zgang.me"
+        }
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["main.js"]
+        }
+    ]
+}
