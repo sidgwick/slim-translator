@@ -20,10 +20,15 @@
         }
     },
 
+	"web_accessible_resources": [
+		"tooltip_fly.html"
+	],
+
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["main.js"]
+            "js": ["main.js"],
+            "css": ["main.css"]
         }
     ]
 }
