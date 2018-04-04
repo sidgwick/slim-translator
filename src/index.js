@@ -2,6 +2,8 @@
  * A slim translator browser extension use google translate api
  */
 
+const gt = require('./google-translate-api');
+
 var translator = {
   tooltip_ele_id: "__slim_translate_button",
   event: null,
@@ -49,7 +51,7 @@ var translator = {
     button.style.top = pos.y + "px";
     button.style.left = pos.x + "px";
 
-    button.addEventListener("click", this.translate.bind(this));
+    button.addEventListener("click", () => this.translate());
 
     let body = document.getElementsByTagName("body")[0];
     let old_button = document.getElementById(this.tooltip_ele_id);
@@ -61,7 +63,15 @@ var translator = {
   },
 
   translate: function () {
-    console.log(this.text);
+    gt(this.text, {
+      to: 'zh-CN'
+    }).then(res => {
+      console.log("google is alive");
+      console.log(res);
+    }).catch(err => {
+      console.log("google is dead");
+      console.error(err);
+    });
   },
 };
 

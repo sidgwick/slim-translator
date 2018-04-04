@@ -4,15 +4,16 @@
   "description": "A translate extension use google translate API",
   "repository": "git@github.com:sidgwick/slim-translator.git",
   "author": "Zhigang Song <song@zgang.me>",
-  "license": "None",
+  "license": "MIT",
   "private": false,
   "scripts": {
     "build": "webpack"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "copy-webpack-plugin": "^4.5.1",
-    "webpack": "^4.4.1",
+    "webpack": "^4.5.0",
     "webpack-cli": "^2.0.13"
   }
 }

@@ -33,5 +33,11 @@
             "js": ["bundle.js"],
             "css": ["main.css"]
         }
-    ]
+    ],
+
+	"permissions": [
+		"webRequest",
+		"webRequestBlocking", 
+		"<all_urls>"
+	]
 }
