@@ -21,13 +21,16 @@
     },
 
 	"web_accessible_resources": [
-		"tooltip_fly.html"
+		"icons/logo-16.png",
+		"icons/logo-32.png",
+		"icons/logo-48.png",
+		"icons/logo-96.png"
 	],
 
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["main.js"],
+            "js": ["bundle.js"],
             "css": ["main.css"]
         }
     ]

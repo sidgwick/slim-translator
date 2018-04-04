@@ -1,3 +1,7 @@
+/**
+ * A slim translator browser extension use google translate api
+ */
+
 var translator = {
   tooltip_ele_id: "__slim_translate_button",
   event: null,
