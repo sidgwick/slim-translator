@@ -2,6 +2,7 @@ var querystring = require('querystring');
 
 var token = require('./token');
 var languages = require('./languages');
+var getGoogleTranslatorDomain = require('./domain');
 
 function translate(text, opts) {
   opts = opts || {};
@@ -27,7 +28,7 @@ function translate(text, opts) {
   opts.to = languages.getCode(opts.to);
 
   return token.get(text).then(function (token) {
-    var url = 'https://translate.google.com/translate_a/single';
+    var url = `https://${getGoogleTranslatorDomain()}/translate_a/single`;
     var data = {
       client: "gtx",
       sl: opts.from,

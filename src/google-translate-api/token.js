@@ -1,4 +1,5 @@
 var sM = require("./google-encrypt");
+var getGoogleTranslatorDomain = require('./domain');
 
 var window = {
   TKK: localStorage['TKK'] || '0'
@@ -11,7 +12,7 @@ function updateTKK() {
     if (Number(window.TKK.split('.')[0]) === now) {
       resolve();
     } else {
-      var url = 'https://translate.google.com';
+      var url = `https://${getGoogleTranslatorDomain()}`;
       fetch(url, {
         method: 'GET',
       }).then(response => {
