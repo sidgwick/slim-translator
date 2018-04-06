@@ -25,8 +25,24 @@ class TranslateResult extends React.Component {
     });
   }
 
+  renderTranslateBlock(type) {
+    return (
+            <div className="gtx-source-block">
+              <div className="gtx-audio-button">
+                <div className="gtx-button-img"></div>
+              </div>
+              <div className="gtx-body">{this.displayResult(type)}</div>
+              <br />
+            </div>
+    );
+  }
+
   renderLanguageSelector() {
     return Object.keys(language).map((item, key) => {
+      if (typeof language[item] !== 'string') {
+        return;
+      }
+
       return (<option value={item} key={key}>{language[item]}</option>);
     });
   }
@@ -41,23 +57,11 @@ class TranslateResult extends React.Component {
                 </select>
               </div>
 
-              <div className="gtx-source-block">
-                <div className="gtx-audio-button">
-                  <div className="gtx-button-img"></div>
-                </div>
-                <div className="gtx-body">{this.displayResult("orig")}</div>
-                <br />
-              </div>
+              {this.renderTranslateBlock("orig")}
 
               <div className="gtx-language gtx-target-language">CHINESE (SIMPLIFIED)</div>
 
-              <div className="gtx-source-block">
-                <div className="gtx-audio-button">
-                  <div className="gtx-button-img"></div>
-                </div>
-                <div className="gtx-body">{this.displayResult("trans")}</div>
-                <br />
-              </div>
+              {this.renderTranslateBlock("trans")}
 
               <div>
                 <a className="gtx-link gtx-link-left" target="_blank" href="extension://xxx/options.html">EXTENSION OPTIONS</a>
