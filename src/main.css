@@ -26,11 +26,16 @@
 }
 
 #__slim_translate_result_area {
-  padding: 5px;
+  padding: 2px;
   margin: 0;
   background: #ffffff;
   border-radius: 0px;
   border: 1px solid #ececec;
   position: fixed;
   z-index: 10000;
+}
+
+#__slim_translate_result_area p {
+  margin: 0;
+  padding: 0;
 }

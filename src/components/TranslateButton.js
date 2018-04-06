@@ -8,7 +8,6 @@ class TranslateButton extends React.Component {
   }
 
   onButtonClick() {
-    console.log("On Translate Button Click");
     this.props.onClick();
   }
 

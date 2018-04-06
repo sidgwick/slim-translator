@@ -41,7 +41,6 @@ function updateTKK() {
 }
 
 function get(text) {
-  console.log("debug text: ", text);
   return updateTKK().then(function () {
     var tk = sM(text);
     tk = tk.replace('&tk=', '');

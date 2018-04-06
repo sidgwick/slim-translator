@@ -1,5 +1,17 @@
 import React from 'react';
 
+class TranslateResultLine extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    };
+  }
+
+  render() {
+    return (<p>{this.props.text}</p>);
+  }
+}
+
 class TranslateResult extends React.Component {
   constructor(props) {
     super(props);
@@ -15,19 +27,15 @@ class TranslateResult extends React.Component {
   }
 
   displayResult() {
-      let text = [];
-      this.props.res.sentences.forEach((item) => {
-        if (item.trans) {
-          text.push(item.trans);
-        }
-      });
-      let result = text.join("\n");
-      console.log(result);
-      return result;
+    let sentences = this.props.res.sentences;
+    return sentences.map((item, key) => {
+      if (item.trans) {
+        return <TranslateResultLine text={item.trans} key={key} />
+      }
+    });
   }
 
   render() {
-    console.log(this.props);
     return (<div id={this.props.id} style={this.btnStyle()}>{this.displayResult()}</div>);
   }
 }
