@@ -1,8 +1,8 @@
-var querystring = require('querystring');
+import querystring from 'querystring';
 
-var token = require('./token');
-var languages = require('./languages');
-var getGoogleTranslatorDomain = require('./domain');
+import token from './token';
+import languages from './languages';
+import getGoogleTranslatorDomain from './domain';
 
 function translate(text, opts) {
   opts = opts || {};

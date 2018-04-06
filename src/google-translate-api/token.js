@@ -1,5 +1,5 @@
-var sM = require("./google-encrypt");
-var getGoogleTranslatorDomain = require('./domain');
+import sM from "./google-encrypt";
+import getGoogleTranslatorDomain from './domain';
 
 var window = {
   TKK: localStorage['TKK'] || '0'
