@@ -19,7 +19,12 @@ class TranslateButton extends React.Component {
   }
 
   render() {
-    return (<button id={this.props.id} onClick={(e) => this.onButtonClick()} style={this.btnStyle()}></button>);
+    let btn_id = `${this.props.id}_button`
+    return (
+            <div id={this.props.id} style={this.btnStyle()}>
+              <div id={btn_id} onClick={(e) => this.onButtonClick()}></div>
+            </div>
+    );
   }
 }
 
