@@ -1,7 +1,6 @@
 #__slim_translate_button {
   padding: 0;
   margin: 0;
-  border: none;
   background: #ffffff url("icons/logo-32.png") no-repeat;
   background-size: cover;
   border-radius: 0px;
@@ -9,12 +8,24 @@
   position: fixed;
   width: 25px;
   height: 25px;
+  z-index: 10000;
 }
 
 #__slim_translate_button:hover {
   cursor: pointer;
   background-color: #ffffff !important;
 }
+
 #__slim_translate_button:active {
   background-color: #ffffff !important;
+}
+
+#__slim_translate_result_area {
+  padding: 5px;
+  margin: 0;
+  background: #ffffff;
+  border-radius: 0px;
+  border: 1px solid #ececec;
+  position: fixed;
+  z-index: 10000;
 }
