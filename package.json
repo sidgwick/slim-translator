@@ -10,8 +10,15 @@
     "build": "webpack"
   },
   "dependencies": {
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.44",
+    "@babel/preset-env": "^7.0.0-beta.44",
+    "@babel/preset-es2015": "^7.0.0-beta.44",
+    "@babel/preset-react": "^7.0.0-beta.44",
+    "babel-loader": "^8.0.0-beta",
     "copy-webpack-plugin": "^4.5.1",
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.13"
