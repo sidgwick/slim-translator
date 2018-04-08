@@ -90,8 +90,8 @@ var translator = {
   },
 
   tooltip_position: function () {
-    let x = this.event.clientX + 10;
-    let y = this.event.clientY + 5;
+    let x = this.event.pageX + 10;
+    let y = this.event.pageY + 5;
 
     return {left: x, top: y};
   },
@@ -123,6 +123,7 @@ var translator = {
 };
 
 window.addEventListener("mouseup", (event) => {
+  //console.log(event);
   translator.run(event);
 });
 
