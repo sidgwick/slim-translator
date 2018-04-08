@@ -1,5 +1,7 @@
 import React from 'react';
 
+import style from '../style';
+
 class TranslateButton extends React.Component {
   constructor(props) {
     super(props);
@@ -13,16 +15,16 @@ class TranslateButton extends React.Component {
 
   btnStyle() {
     return {
+      ...style.st_button_area,
       top: this.props.pos.top,
       left: this.props.pos.left
     };
   }
 
   render() {
-    let btn_id = `${this.props.id}_button`
     return (
             <div id={this.props.id} style={this.btnStyle()}>
-              <div id={btn_id} onClick={(e) => this.onButtonClick()}></div>
+              <div onClick={(e) => this.onButtonClick()} style={style.st_button}></div>
             </div>
     );
   }

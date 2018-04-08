@@ -9,6 +9,8 @@ import gt from './google-translate-api';
 import TranslateButton from './components/TranslateButton';
 import TranslateResult from './components/TranslateResult';
 
+import style from './style';
+
 var translator = {
   root_ele_id: "__st_root",
   button_ele_id: "__st_button_area",
