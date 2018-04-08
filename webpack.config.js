@@ -11,6 +11,12 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
+  resolve: {
+    alias: {
+      "react": "preact-compat",
+      "react-dom": "preact-compat"
+    }
+  },
   module: {
     rules: [{
       test: /\.js$/,
@@ -21,8 +27,11 @@ module.exports = {
           presets: [
             '@babel/preset-env',
             '@babel/preset-es2015',
-            '@babel/preset-react'
+            '@babel/preset-react',
           ],
+          "plugins": [
+            //['@babel/plugin-transform-react-jsx', {"pragma": "h"}],
+          ]
         }
       }
     }],

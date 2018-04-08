@@ -10,8 +10,8 @@
     "build": "webpack"
   },
   "dependencies": {
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1"
+    "preact": "^8.2.7",
+    "preact-compat": "^3.18.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.44",
