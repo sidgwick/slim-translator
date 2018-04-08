@@ -27,11 +27,11 @@ class TranslateResult extends React.Component {
 
   renderTranslateBlock(type) {
     return (
-            <div className="gtx-source-block">
-              <div className="gtx-audio-button">
-                <div className="gtx-button-img"></div>
+            <div className="__st-source-block">
+              <div className="__st-audio-button">
+                <div className="__st-button-img"></div>
               </div>
-              <div className="gtx-body">{this.displayResult(type)}</div>
+              <div className="__st-body">{this.displayResult(type)}</div>
               <br />
             </div>
     );
@@ -51,21 +51,21 @@ class TranslateResult extends React.Component {
     return (
             <div id={this.props.id} style={this.btnStyle()}>
 
-              <div className="gtx-language">
-                <select className="gtx-lang-selector">
+              <div className="__st-language">
+                <select className="__st-lang-selector">
                   {this.renderLanguageSelector()}
                 </select>
               </div>
 
               {this.renderTranslateBlock("orig")}
 
-              <div className="gtx-language gtx-target-language">CHINESE (SIMPLIFIED)</div>
+              <div className="__st-language __st-target-language">CHINESE (SIMPLIFIED)</div>
 
               {this.renderTranslateBlock("trans")}
 
               <div>
-                <a className="gtx-link gtx-link-left" target="_blank" href="extension://xxx/options.html">EXTENSION OPTIONS</a>
-                <a className="gtx-link gtx-link-right" target="_blank" href="https://translate.google.com/?" >MORE »</a>
+                <a className="__st-link __st-link-left" target="_blank" href="extension://xxx/options.html">EXTENSION OPTIONS</a>
+                <a className="__st-link __st-link-right" target="_blank" href="https://translate.google.com/?" >MORE »</a>
               </div>
 
             </div>

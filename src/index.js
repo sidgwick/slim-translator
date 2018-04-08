@@ -10,9 +10,9 @@ import TranslateButton from './components/TranslateButton';
 import TranslateResult from './components/TranslateResult';
 
 var translator = {
-  root_ele_id: "__slim_translate_root",
-  button_ele_id: "__slim_translate_button_area",
-  result_ele_id: "__slim_translate_result_area",
+  root_ele_id: "__st_root",
+  button_ele_id: "__st_button_area",
+  result_ele_id: "__st_result_area",
   event: null,
   text: null,
 
