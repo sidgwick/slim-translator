@@ -16,12 +16,11 @@ var translator = {
   button_ele_id: "__st_button_area",
   result_ele_id: "__st_result_area",
   event: null,
+  selection_range: null,
   text: null,
 
   run: function (event) {
     this.event = event;
-    this.initTranslateRootArea();
-
     if (document.getElementById(this.button_ele_id)) {
       // 走到这里表示在:
       // 1. 点击翻译按钮, 由按钮 onClick 来处理接下来的动作
@@ -38,8 +37,10 @@ var translator = {
       return;
     }
 
+    this.initTranslateRootArea();
     let selection = document.getSelection();
     this.text = selection.toString();
+    this.selection_range = selection.getRangeAt(0);
     if (!this.text) {
       return;
     }
@@ -63,13 +64,13 @@ var translator = {
     let x = this.event.clientX;
     let y = this.event.clientY;
 
-    if (pos.x <= x
-        && x <= (pos.x + pos.width)
-        && pos.y <= y
-        && y <= (pos.y + pos.height)
+    if (pos.x <= x && x <= (pos.x + pos.width)
+        && pos.y <= y && y <= (pos.y + pos.height)
     ) {
       // 点击到了按钮上
-      return;
+      // 一下代码用于保持选择的字符高亮
+      window.getSelection().addRange(this.selection_range);
+      return true;
     }
 
     // 清空翻译根 DOM
