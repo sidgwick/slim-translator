@@ -1,6 +1,6 @@
 {
   "name": "slim-translator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A translate extension use google translate API",
   "repository": "git@github.com:sidgwick/slim-translator.git",
   "author": "Zhigang Song <song@zgang.me>",
