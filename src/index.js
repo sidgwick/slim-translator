@@ -91,8 +91,32 @@ var translator = {
   },
 
   tooltip_position: function () {
-    let x = this.event.pageX + 10;
-    let y = this.event.pageY + 5;
+    // 默认位置是鼠标点击位置
+    let x = this.event.pageX - 10;
+    let y = this.event.pageY + 15;
+
+    // 选定了文字, 以文字位置为准
+    if (this.text) {
+      let rect = this.selection_range.getClientRects();
+      let lr = rect[rect.length - 1];
+
+      let x1 = (lr.x + lr.x + lr.width) / 2 - 10;
+      let y1 = (lr.y + lr.height + 5);
+
+      // 文字选择和鼠标事件差太多, 还是要以鼠标事件为准比较合理
+      // 主要考虑水平方向上上的错误
+      if (Math.abs(y - y1) <= 50) {
+        x = x1;
+        y = y1;
+      }
+    }
+
+    let btn = document.getElementById(this.button_ele_id);
+    if (btn) {
+      // 显示翻译结果, 位置就在原来按钮位置即可
+      x = btn.style.left;
+      y = btn.style.top;
+    }
 
     return {left: x, top: y};
   },
