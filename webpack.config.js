@@ -1,5 +1,7 @@
+var webpack = require("webpack");
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const path = require('path');
+
 
 module.exports = {
   entry: './src/index.js',
@@ -44,6 +46,9 @@ module.exports = {
       {from: "src/manifest.json", to: "[name].[ext]"},
       //], options)
     ]),
+    new webpack.SourceMapDevToolPlugin({
+      filename: '[name].js.map',
+    })
   ],
 };
 
