@@ -46,9 +46,9 @@ module.exports = {
       {from: "src/manifest.json", to: "[name].[ext]"},
       //], options)
     ]),
-    new webpack.SourceMapDevToolPlugin({
-      filename: '[name].js.map',
-    })
+    //new webpack.SourceMapDevToolPlugin({
+      //filename: '[name].js.map',
+    //})
   ],
 };
 

@@ -30,9 +30,9 @@ class TranslateResult extends React.Component {
   renderTranslateBlock(type) {
     return (
             <div className="__st-source-block">
-              <div style={style.st_audio_button}>
+              {/*<div style={style.st_audio_button}>
                 <div style={style.st_audio_button_img}></div>
-              </div>
+              </div>*/}
               <div style={style.st_body}>{this.displayResult(type)}</div>
               <br />
             </div>
@@ -54,26 +54,27 @@ class TranslateResult extends React.Component {
             <div id={this.props.id} style={this.wrapperStyle()}>
 
               <div style={style.st_translate_body}>
+{/*
                 <div style={style.st_language}>
                   <select style={style.st_lang_selector}>
                     {this.renderLanguageSelector()}
                   </select>
                 </div>
-
+*/}
                 {this.renderTranslateBlock("orig")}
 
                 <div style={{...style.st_language, marginTop: "3px"}}>CHINESE (SIMPLIFIED)</div>
 
                 {this.renderTranslateBlock("trans")}
-
+{/*
                 <div style={style.st_option}>
                   <a style={style.st_link} target="_blank" href="extension://xxx/options.html">EXTENSION OPTIONS</a>
                   <a style={style.st_link} target="_blank" href="https://translate.google.com/?" >MORE »</a>
                 </div>
-
+*/}
               </div>
 
-              <div style={style.st_close_button}></div>
+              {/* <div style={style.st_close_button}></div> */}
 
               <div style={style.st_result_arrow}>
                 <div style={{...style.st_result_arrow_border, ...style.st_result_arrow_before}}></div>
