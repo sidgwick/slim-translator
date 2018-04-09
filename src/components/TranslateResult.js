@@ -10,9 +10,9 @@ class TranslateResult extends React.Component {
     };
   }
 
-  btnStyle() {
+  wrapperStyle() {
     return {
-      ...style.st_result_area,
+      ...style.st_result_wrapper,
       top: this.props.pos.top,
       left: this.props.pos.left
     };
@@ -51,24 +51,35 @@ class TranslateResult extends React.Component {
 
   render() {
     return (
-            <div id={this.props.id} style={this.btnStyle()}>
+            <div id={this.props.id} style={this.wrapperStyle()}>
 
-              <div style={style.st_language}>
-                <select style={style.st_lang_selector}>
-                  {this.renderLanguageSelector()}
-                </select>
+              <div style={style.st_translate_body}>
+                <div style={style.st_language}>
+                  <select style={style.st_lang_selector}>
+                    {this.renderLanguageSelector()}
+                  </select>
+                </div>
+
+                {this.renderTranslateBlock("orig")}
+
+                <div style={{...style.st_language, marginTop: "3px"}}>CHINESE (SIMPLIFIED)</div>
+
+                {this.renderTranslateBlock("trans")}
+
+                <div style={style.st_option}>
+                  <a style={style.st_link} target="_blank" href="extension://xxx/options.html">EXTENSION OPTIONS</a>
+                  <a style={style.st_link} target="_blank" href="https://translate.google.com/?" >MORE »</a>
+                </div>
+
               </div>
 
-              {this.renderTranslateBlock("orig")}
+              <div style={style.st_close_button}></div>
 
-              <div style={{...style.st_language, marginTop: "3px"}}>CHINESE (SIMPLIFIED)</div>
-
-              {this.renderTranslateBlock("trans")}
-
-              <div>
-                <a style={{...style.st_link, float: "left"}} target="_blank" href="extension://xxx/options.html">EXTENSION OPTIONS</a>
-                <a style={{...style.st_link, float: "right"}} target="_blank" href="https://translate.google.com/?" >MORE »</a>
+              <div style={style.st_result_arrow}>
+                <div style={{...style.st_result_arrow_border, ...style.st_result_arrow_before}}></div>
+                <div style={{...style.st_result_arrow_border, ...style.st_result_arrow_after}}></div>
               </div>
+
 
             </div>
     );

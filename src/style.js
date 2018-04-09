@@ -23,16 +23,18 @@ module.exports = {
     "height": "19px",
     "width": "19px"
   },
-  "st_result_area": {
+  "st_result_wrapper": {
     "textAlign": "left",
-    "boxShadow": "rgba(0, 0, 0, 0.2) 0px 1px 3px",
-    "backgroundColor": "rgb(255, 255, 255)",
     "position": "absolute",
     "zIndex": "1201 !important",
+    "boxShadow": "rgba(0, 0, 0, 0.2) 0px 1px 3px",
+    "backgroundColor": "rgb(255, 255, 255)",
     "borderWidth": "1px",
     "borderStyle": "solid",
     "borderImage": "initial",
     "borderColor": "rgb(187, 187, 187) rgb(187, 187, 187) rgb(168, 168, 168)",
+  },
+  "st_translate_body": {
     "padding": "16px",
     "minWidth": "200px",
     "maxWidth": "400px",
@@ -85,11 +87,57 @@ module.exports = {
     "verticalAlign": "middle",
     "display": "inline-block"
   },
+  "st_option": {
+    "display": "flex",
+    "flexDirection": "row",
+    "justifyContent": "space-between",
+  },
   "st_link": {
     "color": "#a2a2a2",
     "paddingTop": "16px",
-    "display": "inline",
     "fontSize": "11px",
     "textDecoration": "none"
+  },
+  "st_close_button": {
+    "height": "21px",
+    "opacity": "0.4",
+    "position": "absolute",
+    "right": "2px",
+    "top": "2px",
+    "width": "21px",
+    "background": "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAYUlEQVQ4y2P4//8/A7Uxw6ihw8BQIDAAYn40MX6QOFmGQg38AMQnYAZDDTwBFTcgx1CYAf+htBwan59c7yMb/JMYA4mKKKgLfyIZLEdpRFHXpTQJU5rEPk3S6WjeHwGGAgB7bY/MvPH1YwAAAABJRU5ErkJggg==') no-repeat",
+    "borderWidth": "1px",
+    "borderStyle": "solid",
+    "borderColor": "transparent",
+    "borderImage": "initial",
+    "outline": "0px"
+  },
+
+  "st_result_arrow": {
+    "top": "-9px",
+    "position": "absolute",
+  },
+  "st_result_arrow_border": {
+    "borderStyle": "solid",
+    "borderImage": "initial",
+    "display": "block",
+    "height": "0px",
+    "position": "absolute",
+    "width": "0px",
+  },
+  "st_result_arrow_before": {
+    "left": "9px",
+
+    "borderColor": "rgb(187, 187, 187) transparent",
+    "borderWidth": "9px",
+    "borderTopWidth": "0px",
+  },
+  "st_result_arrow_after": {
+    "left": "10px",
+
+    "top": "1px",
+    "borderColor": "rgb(255, 255, 255) transparent",
+    "borderWidth": "8px",
+    "borderTopWidth": "0px",
   },
 };
